@@ -7,15 +7,24 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import Header from './components/Header';
+import AboutMe from './components/AboutMe';
+import Project from './components/Project';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-import Project from './components/Project';
-import AboutMe from './components/AboutMe';
+
+
+const font =  "'Rock Salt', cursive";
+// const theme = createMuiTheme({
+//   typography: {
+//     fontFamily: font,
+//     }
+//   }
+// );
 
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider>
       <div>
       <Header></Header> 
         <main>

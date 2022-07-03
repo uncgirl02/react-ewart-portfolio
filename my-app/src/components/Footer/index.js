@@ -10,20 +10,20 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaStackOverflow } from 'react-icons/fa';
 
 
-const SocialButton = (
+const SocialButton = ({
   children,
   label,
   href,
- ) => {
+}) => {
   return (
     <chakra.button
-      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+      bg={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
       rounded={'full'}
-      w={8}
-      h={8}
+      w={20}
+      h={20}
       cursor={'pointer'}
       as={'a'}
       href={href}
@@ -32,7 +32,7 @@ const SocialButton = (
       justifyContent={'center'}
       transition={'background 0.3s ease'}
       _hover={{
-        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+        bg: useColorModeValue('blackAlpha.300', 'whiteAlpha.300'),
       }}>
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
@@ -55,14 +55,14 @@ export function Footer() {
         align={{ base: 'center', md: 'center' }}>
         <Text>© 2022 Erin Ewart. All rights reserved</Text>
         <Stack direction={'row'} spacing={6}>
-          <SocialButton label={'Twitter'} href={'#'}>
-            <FaTwitter />
+          <SocialButton label={'Github'} href={'https://github.com/uncgirl02'}>
+            <FaGithub size={40}/>
           </SocialButton>
-          <SocialButton label={'YouTube'} href={'#'}>
-            <FaYoutube />
+          <SocialButton label={'LinkedIn'} href={'https://www.linkedin.com/in/erin-ewart/'}>
+            <FaLinkedin size={40}/>
           </SocialButton>
-          <SocialButton label={'Instagram'} href={'#'}>
-            <FaInstagram />
+          <SocialButton label={'StackOverflow'} href={'https://stackoverflow.com/users/17812432/uncgirl02'}>
+            <FaStackOverflow size={40}/>
           </SocialButton>
         </Stack>
       </Container>

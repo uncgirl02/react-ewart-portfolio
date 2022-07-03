@@ -8,21 +8,30 @@ import {
   Text,
   Stack,
   Image,
+  VStack,
+  Button,
+  HStack,
 } from '@chakra-ui/react';
 
 import { Wrap, WrapItem } from '@chakra-ui/react'
 import { Flex, Spacer } from '@chakra-ui/react'
 
-const PROJ1 =
-  'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80';
+import PROJ1 from '../../assets/project-images/proj-1.jpg';
+import { FaGithub } from 'react-icons/fa';
+import PROJ2 from '../../assets/project-images/proj-2.png';
+import PROJ3 from '../../assets/project-images/proj-3.png';
+import PROJ4 from '../../assets/project-images/proj-4.png';
+import PROJ5 from '../../assets/project-images/proj-5.png';
+import PROJ6 from '../../assets/project-images/proj-6.png';
 
 export function Project() {
   return (
-    <Center py={12}>
+    <Center py={12} ps={6} bg={'blue.50'}>
       <Flex>
-        <Wrap>
+        <Wrap justify='center' spacing={10}>
           <WrapItem>
             <Box
+              id="projects"
               role={'group'}
               p={6}
               maxW={'330px'}
@@ -34,7 +43,6 @@ export function Project() {
               zIndex={1}>
               <Box
                 rounded={'lg'}
-                mt={-12}
                 pos={'relative'}
                 height={'230px'}
                 _after={{
@@ -45,7 +53,7 @@ export function Project() {
                   pos: 'absolute',
                   top: 5,
                   left: 0,
-                  backgroundImage: `url(${IMAGE})`,
+                  backgroundImage: `url(${PROJ1})`,
                   filter: 'blur(15px)',
                   zIndex: -1,
                 }}
@@ -59,27 +67,112 @@ export function Project() {
                   height={230}
                   width={282}
                   objectFit={'cover'}
-                  src={IMAGE}
+                  src={PROJ1}
                 />
               </Box>
               <Stack pt={10} align={'center'}>
                 <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-                  Brand
+                  HTML/CSS
+                </Text>
+                <Heading color={'#04054B'} fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+                  Run Buddy
+                </Heading>
+                <HStack pt={5}>
+                  <Button
+                  as='a'
+                  bg={'blue.400'}
+                  rounded={'full'}
+                  color={'white'}
+                  _hover={{ bg: 'blue.500' }}
+                  href='https://github.com/uncgirl02/run-buddy.git'>
+                      Deployed App
+                  </Button>
+                  <Button
+                  as='a'
+                  bg={'blue.400'}
+                  rounded={'full'}
+                  color={'white'}
+                  _hover={{ bg: 'blue.500' }}
+                  href='https://github.com/uncgirl02/run-buddy.git'>
+                      GitHub Repo
+                  </Button>
+                </HStack>
+              </Stack>
+              
+            </Box>
+          </WrapItem>
+          {/* <Spacer /> */}
+          <WrapItem>
+            <Box
+              role={'group'}
+              p={6}
+              maxW={'330px'}
+              w={'full'}
+              bg={useColorModeValue('white', 'gray.800')}
+              boxShadow={'2xl'}
+              rounded={'lg'}
+              pos={'relative'}
+              zIndex={1}>
+              <Box
+                rounded={'lg'}
+                pos={'relative'}
+                height={'230px'}
+                _after={{
+                  transition: 'all .3s ease',
+                  content: '""',
+                  w: 'full',
+                  h: 'full',
+                  pos: 'absolute',
+                  top: 5,
+                  left: 0,
+                  backgroundImage:`url(${PROJ2})`,
+                  filter: 'blur(15px)',
+                  zIndex: -1,
+                }}
+                _groupHover={{
+                  _after: {
+                    filter: 'blur(20px)',
+                  },
+                }}>
+                <Image
+                  rounded={'lg'}
+                  height={230}
+                  width={282}
+                  objectFit={'cover'}
+                  src={PROJ2}
+                />
+              </Box>
+              <Stack pt={10} align={'center'}>
+                <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
+                  HTML/CSS
                 </Text>
                 <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-                  Nice Chair, pink
+                  Horiseon Code Refactor
                 </Heading>
-                <Stack direction={'row'} align={'center'}>
-                  <Text fontWeight={800} fontSize={'xl'}>
-                    $57
-                  </Text>
-                  <Text textDecoration={'line-through'} color={'gray.600'}>
-                    $199
-                  </Text>
-                </Stack>
+                <HStack pt={5}>
+                  <Button
+                  as='a'
+                  bg={'blue.400'}
+                  rounded={'full'}
+                  color={'white'}
+                  _hover={{ bg: 'blue.500' }}
+                  href='https://uncgirl02.github.io/horiseon-code-refactor/'>
+                      Deployed App
+                  </Button>
+                  <Button
+                  as='a'
+                  bg={'blue.400'}
+                  rounded={'full'}
+                  color={'white'}
+                  _hover={{ bg: 'blue.500' }}
+                  href='https://github.com/uncgirl02/horiseon-code-refactor.git'>
+                      GitHub Repo
+                  </Button>
+                </HStack>
               </Stack>
             </Box>
           </WrapItem>
+          {/* <Spacer /> */}
           <WrapItem>
             <Box
               role={'group'}
@@ -93,7 +186,6 @@ export function Project() {
               zIndex={1}>
               <Box
                 rounded={'lg'}
-                mt={-12}
                 pos={'relative'}
                 height={'230px'}
                 _after={{
@@ -104,7 +196,7 @@ export function Project() {
                   pos: 'absolute',
                   top: 5,
                   left: 0,
-                  backgroundImage: `url(${IMAGE})`,
+                  backgroundImage: `url(${PROJ3})`,
                   filter: 'blur(15px)',
                   zIndex: -1,
                 }}
@@ -118,27 +210,40 @@ export function Project() {
                   height={230}
                   width={282}
                   objectFit={'cover'}
-                  src={IMAGE}
+                  src={PROJ3}
                 />
               </Box>
               <Stack pt={10} align={'center'}>
                 <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-                  Brand
+                  HTML/CSS/JavaScript
                 </Text>
                 <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-                  Nice Chair, pink
+                  Pet Fact Generator
                 </Heading>
-                <Stack direction={'row'} align={'center'}>
-                  <Text fontWeight={800} fontSize={'xl'}>
-                    $57
-                  </Text>
-                  <Text textDecoration={'line-through'} color={'gray.600'}>
-                    $199
-                  </Text>
-                </Stack>
+                <HStack pt={5}>
+                  <Button
+                  as='a'
+                  bg={'blue.400'}
+                  rounded={'full'}
+                  color={'white'}
+                  _hover={{ bg: 'blue.500' }}
+                  href='https://uncgirl02.github.io/vaulting-sharks-cat-dog-fact-generator'>
+                      Deployed App
+                  </Button>
+                  <Button
+                  as='a'
+                  bg={'blue.400'}
+                  rounded={'full'}
+                  color={'white'}
+                  _hover={{ bg: 'blue.500' }}
+                  href='https://github.com/uncgirl02/vaulting-sharks-cat-dog-fact-generator.git'>
+                      GitHub Repo
+                  </Button>
+                </HStack>
               </Stack>
             </Box>
           </WrapItem>
+          {/* <Spacer /> */}
           <WrapItem>
             <Box
               role={'group'}
@@ -152,7 +257,6 @@ export function Project() {
               zIndex={1}>
               <Box
                 rounded={'lg'}
-                mt={-12}
                 pos={'relative'}
                 height={'230px'}
                 _after={{
@@ -163,7 +267,7 @@ export function Project() {
                   pos: 'absolute',
                   top: 5,
                   left: 0,
-                  backgroundImage: `url(${IMAGE})`,
+                  backgroundImage: `url(${PROJ4})`,
                   filter: 'blur(15px)',
                   zIndex: -1,
                 }}
@@ -177,27 +281,40 @@ export function Project() {
                   height={230}
                   width={282}
                   objectFit={'cover'}
-                  src={IMAGE}
+                  src={PROJ4}
                 />
               </Box>
               <Stack pt={10} align={'center'}>
                 <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-                  Brand
+                 HTML/CSS/JavaScript/PWA
                 </Text>
                 <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-                  Nice Chair, pink
+                  Budget Tracker
                 </Heading>
-                <Stack direction={'row'} align={'center'}>
-                  <Text fontWeight={800} fontSize={'xl'}>
-                    $57
-                  </Text>
-                  <Text textDecoration={'line-through'} color={'gray.600'}>
-                    $199
-                  </Text>
-                </Stack>
+                <HStack pt={5}>
+                  <Button
+                  as='a'
+                  bg={'blue.400'}
+                  rounded={'full'}
+                  color={'white'}
+                  _hover={{ bg: 'blue.500' }}
+                  href='https://guarded-river-93153.herokuapp.com/'>
+                      Deployed App
+                  </Button>
+                  <Button
+                  as='a'
+                  bg={'blue.400'}
+                  rounded={'full'}
+                  color={'white'}
+                  _hover={{ bg: 'blue.500' }}
+                  href='https://github.com/uncgirl02/budget-track-attack.git'>
+                      GitHub Repo
+                  </Button>
+                </HStack>
               </Stack>
             </Box>
           </WrapItem>
+          {/* <Spacer /> */}
           <WrapItem>
             <Box
               role={'group'}
@@ -211,7 +328,6 @@ export function Project() {
               zIndex={1}>
               <Box
                 rounded={'lg'}
-                mt={-12}
                 pos={'relative'}
                 height={'230px'}
                 _after={{
@@ -222,7 +338,7 @@ export function Project() {
                   pos: 'absolute',
                   top: 5,
                   left: 0,
-                  backgroundImage: `url(${IMAGE})`,
+                  backgroundImage: `url(${PROJ5})`,
                   filter: 'blur(15px)',
                   zIndex: -1,
                 }}
@@ -236,27 +352,40 @@ export function Project() {
                   height={230}
                   width={282}
                   objectFit={'cover'}
-                  src={IMAGE}
+                  src={PROJ5}
                 />
               </Box>
               <Stack pt={10} align={'center'}>
                 <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-                  Brand
+                HTML/CSS/JavaScript/APIs
                 </Text>
                 <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-                  Nice Chair, pink
+                  Weather Dashboard
                 </Heading>
-                <Stack direction={'row'} align={'center'}>
-                  <Text fontWeight={800} fontSize={'xl'}>
-                    $57
-                  </Text>
-                  <Text textDecoration={'line-through'} color={'gray.600'}>
-                    $199
-                  </Text>
-                </Stack>
+                <HStack pt={5}>
+                  <Button
+                  as='a'
+                  bg={'blue.400'}
+                  rounded={'full'}
+                  color={'white'}
+                  _hover={{ bg: 'blue.500' }}
+                  href='https://uncgirl02.github.io/weather-dashboard/'>
+                      Deployed App
+                  </Button>
+                  <Button
+                  as='a'
+                  bg={'blue.400'}
+                  rounded={'full'}
+                  color={'white'}
+                  _hover={{ bg: 'blue.500' }}
+                  href='https://github.com/uncgirl02/weather-dashboard.git'>
+                      GitHub Repo
+                  </Button>
+                </HStack>
               </Stack>
             </Box>
           </WrapItem>
+          {/* <Spacer /> */}
           <WrapItem>
             <Box
               role={'group'}
@@ -270,7 +399,6 @@ export function Project() {
               zIndex={1}>
               <Box
                 rounded={'lg'}
-                mt={-12}
                 pos={'relative'}
                 height={'230px'}
                 _after={{
@@ -281,13 +409,13 @@ export function Project() {
                   pos: 'absolute',
                   top: 5,
                   left: 0,
-                  backgroundImage: `url(${IMAGE})`,
+                  backgroundImage: `url(${PROJ6})`,
                   filter: 'blur(15px)',
                   zIndex: -1,
                 }}
                 _groupHover={{
                   _after: {
-                    filter: 'blur(20px)',
+                    filter: 'blur(25px)',
                   },
                 }}>
                 <Image
@@ -295,81 +423,36 @@ export function Project() {
                   height={230}
                   width={282}
                   objectFit={'cover'}
-                  src={IMAGE}
+                  src={PROJ6}
                 />
               </Box>
               <Stack pt={10} align={'center'}>
                 <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-                  Brand
+                HTML/CSS/JavaScript/MVC
                 </Text>
                 <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-                  Nice Chair, pink
+                  Coin Vault
                 </Heading>
-                <Stack direction={'row'} align={'center'}>
-                  <Text fontWeight={800} fontSize={'xl'}>
-                    $57
-                  </Text>
-                  <Text textDecoration={'line-through'} color={'gray.600'}>
-                    $199
-                  </Text>
-                </Stack>
-              </Stack>
-            </Box>
-            <Box
-              role={'group'}
-              p={6}
-              maxW={'330px'}
-              w={'full'}
-              bg={useColorModeValue('white', 'gray.800')}
-              boxShadow={'2xl'}
-              rounded={'lg'}
-              pos={'relative'}
-              zIndex={1}>
-              <Box
-                rounded={'lg'}
-                mt={-12}
-                pos={'relative'}
-                height={'230px'}
-                _after={{
-                  transition: 'all .3s ease',
-                  content: '""',
-                  w: 'full',
-                  h: 'full',
-                  pos: 'absolute',
-                  top: 5,
-                  left: 0,
-                  backgroundImage: `url(${IMAGE})`,
-                  filter: 'blur(15px)',
-                  zIndex: -1,
-                }}
-                _groupHover={{
-                  _after: {
-                    filter: 'blur(20px)',
-                  },
-                }}>
-                <Image
-                  rounded={'lg'}
-                  height={230}
-                  width={282}
-                  objectFit={'cover'}
-                  src={IMAGE}
-                />
-              </Box>
-              <Stack pt={10} align={'center'}>
-                <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-                  Brand
-                </Text>
-                <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-                  Nice Chair, pink
-                </Heading>
-                <Stack direction={'row'} align={'center'}>
-                  <Text fontWeight={800} fontSize={'xl'}>
-                    $57
-                  </Text>
-                  <Text textDecoration={'line-through'} color={'gray.600'}>
-                    $199
-                  </Text>
-                </Stack>
+                <HStack pt={5}>
+                  <Button
+                  as='a'
+                  bg={'blue.400'}
+                  rounded={'full'}
+                  color={'white'}
+                  _hover={{ bg: 'blue.500' }}
+                  href='https://the-coin-vault.herokuapp.com/'>
+                      Deployed App
+                  </Button>
+                  <Button
+                  as='a'
+                  bg={'blue.400'}
+                  rounded={'full'}
+                  color={'white'}
+                  _hover={{ bg: 'blue.500' }}
+                  href='https://github.com/ApolloSolo/Coin-Vault.git'>
+                      GitHub Repo
+                  </Button>
+                </HStack>
               </Stack>
             </Box>
           </WrapItem>

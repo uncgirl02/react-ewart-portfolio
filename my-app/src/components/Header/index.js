@@ -1,51 +1,39 @@
 import React from 'react';
+import { useState } from 'react'
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import coverImage from '../../assets/header-images/cover-photo.jpg';
 import profileImage from '../../assets/header-images/profile.jpg';
+import Resume from '../../assets/header-images/Erin-Ewart-Resume.pdf';
 
 import {
   Box,
   Flex,
   HStack,
-  Link,
   IconButton,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
-  Stack,
   Text,
   VStack,
   useBreakpointValue,
   Image,
 } from '@chakra-ui/react';
 
+const font = "'Rock Salt', cursive";
+// const styles = theme = ({
+//   introText: {
+//     fontFamily: font,
+//     color: "white"
+//     }
+//   }
+// );
 
-const Links = ['About Me', 'Projects', 'Contact Me'];
-
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={'lg'}
-    _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
-    }}
-    href={'#'}>
-    {children}
-  </Link>
-);
 
 export function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={6}>
+      <Box bg={useColorModeValue('blue.400', 'gray.900')} px={6}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -53,45 +41,35 @@ export function Header() {
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack spacing={8} alignItems={'center'}>
+          <HStack spacing={8} alignItems={'center'} >
             <HStack
               as={'nav'}
               spacing={4}
-              display={{ base: 'none', md: 'flex' }}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+              display={{ base: 'none', md: 'flex' }}
+              >
+              <Text fontFamily={font}
+                color={'white'}
+                fontWeight='bold'>Erin Ewart</Text>
+              <Button
+              as='a'
+              href='#about-me'>
+                About Me
+              </Button>
+              <Button
+              as='a'
+              href='#projects'>
+                Projects
+              </Button>
+              <Button
+              as='a'
+              href='#contact-me'>
+                Contact Me
+              </Button>
             </HStack>
           </HStack>
-          <Flex alignItems={'center'}>
-            <Menu>
-              <MenuButton
-                as={Button}
-                rounded={'full'}
-                variant={'link'}
-                cursor={'pointer'}
-                minW={0}>
-              </MenuButton>
-              <MenuList>
-                <MenuItem>#AboutMe</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>#ContactForm</MenuItem>
-              </MenuList>
-            </Menu>
-          </Flex>
         </Flex>
-
-        {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </Stack>
-          </Box>
-        ) : null}
       </Box>
+
       <Flex
         w={'full'}
         h={'100vh'}
@@ -103,34 +81,52 @@ export function Header() {
           justify={'center'}
           px={useBreakpointValue({ base: 4, md: 8 })}
           bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-          <Stack maxW={'2xl'} direction={'column'} align={'flex-start'} justify-content={'space-between'} spacing={6}>
-            <Text
-              color={'white'}
-              fontWeight={700}
-              lineHeight={1.2}
-              fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
-              Hi! I'm <span color={'blue'}>Erin Ewart</span> and I'm a Full Stack Web Developer.
-            </Text>
+          <HStack maxW={'3xl'} align={'flex-start'} justify-content={'space-around'} spacing={6}>
+            <VStack direction={'row'} align={'flex-start'} spacing={10}>
+              <Text
+                color={'white'}
+                fontWeight={700}
+                lineHeight={1.2}
+                fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
+                Hi! I'm
+              </Text>
+              <Text
+                fontFamily={font}
+                color={'white'}
+                fontWeight={400}
+                lineHeight={1.4}
+                fontSize={useBreakpointValue({ base: '5xl', md: '7xl' })}>
+                Erin Ewart
+              </Text>
+              <Text
+                color={'white'}
+                fontWeight={700}
+                lineHeight={1.2}
+                fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
+                and I'm a Full Stack Web Developer.
+              </Text>
+              <Button
+                as='a'
+                bg={'blue.400'}
+                rounded={'full'}
+                color={'white'}
+                _hover={{ bg: 'blue.500' }}
+                href={Resume}>
+                Download Resume
+              </Button>
+            </VStack>
             <Image
               borderRadius='full'
               boxSize='300px'
               objectFit={'cover'}
               src={profileImage}
               alt='Erin Ewart'></Image>
-          </Stack>
-          <Stack direction={'row'}>
-            <Button
-              bg={'blue.400'}
-              rounded={'full'}
-              color={'white'}
-              _hover={{ bg: 'blue.500' }}>
-              Download Resume
-            </Button>
-          </Stack>
+          </HStack>
         </VStack>
       </Flex>
     </>
-  );
+
+  )
 }
 
 
