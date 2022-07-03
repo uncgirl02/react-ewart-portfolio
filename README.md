@@ -25,7 +25,7 @@ https://uncgirl02.github.io/react-ewart-portfolio/
 
 Use the navigation at the top to easily access the "About Me," "Projects," or "Contact Me" sections.  Through my portfolio you can easily download my resume or send me a message through the click of a button! 
 
-![Portfolio Screenshot](./src/assets/screenshot.png)
+![Portfolio Screenshot](./my-app/src/assets/screenshot.png)
 
 ## License
 
