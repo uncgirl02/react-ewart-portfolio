@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-ewart-portfolio/static/css/main.aa2f62b5.css",
-    "main.js": "/react-ewart-portfolio/static/js/main.19ad88c7.js",
+    "main.js": "/react-ewart-portfolio/static/js/main.4e197f4b.js",
     "static/js/377.c1855308.chunk.js": "/react-ewart-portfolio/static/js/377.c1855308.chunk.js",
     "static/media/proj-6.png": "/react-ewart-portfolio/static/media/proj-6.d5df8163a542001fe6e7.png",
     "static/media/proj-2.png": "/react-ewart-portfolio/static/media/proj-2.992100eb459a5d7f364a.png",
@@ -13,11 +13,11 @@
     "static/media/Erin-Ewart-Resume.pdf": "/react-ewart-portfolio/static/media/Erin-Ewart-Resume.f45f9181ab5b5d633726.pdf",
     "static/media/proj-4.png": "/react-ewart-portfolio/static/media/proj-4.3b83fbe8031280a287d3.png",
     "index.html": "/react-ewart-portfolio/index.html",
-    "main.19ad88c7.js.map": "/react-ewart-portfolio/static/js/main.19ad88c7.js.map",
+    "main.4e197f4b.js.map": "/react-ewart-portfolio/static/js/main.4e197f4b.js.map",
     "377.c1855308.chunk.js.map": "/react-ewart-portfolio/static/js/377.c1855308.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aa2f62b5.css",
-    "static/js/main.19ad88c7.js"
+    "static/js/main.4e197f4b.js"
   ]
 }
