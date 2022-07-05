@@ -23,7 +23,7 @@ const font = "'Rock Salt', cursive";
 function App() {
   return (
     <ChakraProvider>
-      <Router>
+      <BrowserRouter>
         <div>
           <Routes>
             <Route
@@ -36,7 +36,7 @@ function App() {
             />
           </Routes>
         </div>
-      </Router>
+      </BrowserRouter>
     </ChakraProvider>
   );
 }
