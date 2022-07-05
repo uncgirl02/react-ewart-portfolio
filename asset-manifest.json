@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/react-ewart-portfolio/projects/static/css/main.aa2f62b5.css",
-    "main.js": "/react-ewart-portfolio/projects/static/js/main.2f7dbafb.js",
-    "static/js/377.c1855308.chunk.js": "/react-ewart-portfolio/projects/static/js/377.c1855308.chunk.js",
-    "static/media/proj-6.png": "/react-ewart-portfolio/projects/static/media/proj-6.d5df8163a542001fe6e7.png",
-    "static/media/proj-2.png": "/react-ewart-portfolio/projects/static/media/proj-2.992100eb459a5d7f364a.png",
-    "static/media/proj-3.png": "/react-ewart-portfolio/projects/static/media/proj-3.e69b86e2198b6be6fb80.png",
-    "static/media/cover-photo.jpg": "/react-ewart-portfolio/projects/static/media/cover-photo.42e26b360571fe0c8b26.jpg",
-    "static/media/proj-1.jpg": "/react-ewart-portfolio/projects/static/media/proj-1.38e2b84affc44c1281c4.jpg",
-    "static/media/profile.jpg": "/react-ewart-portfolio/projects/static/media/profile.0323e0f28e1a335c7f5f.jpg",
-    "static/media/proj-5.png": "/react-ewart-portfolio/projects/static/media/proj-5.6839ef7136c232caf56f.png",
-    "static/media/Erin-Ewart-Resume.pdf": "/react-ewart-portfolio/projects/static/media/Erin-Ewart-Resume.f45f9181ab5b5d633726.pdf",
-    "static/media/proj-4.png": "/react-ewart-portfolio/projects/static/media/proj-4.3b83fbe8031280a287d3.png",
-    "index.html": "/react-ewart-portfolio/projects/index.html",
-    "main.2f7dbafb.js.map": "/react-ewart-portfolio/projects/static/js/main.2f7dbafb.js.map",
-    "377.c1855308.chunk.js.map": "/react-ewart-portfolio/projects/static/js/377.c1855308.chunk.js.map"
+    "main.css": "/react-ewart-portfolio/static/css/main.aa2f62b5.css",
+    "main.js": "/react-ewart-portfolio/static/js/main.165ef42c.js",
+    "static/js/377.c1855308.chunk.js": "/react-ewart-portfolio/static/js/377.c1855308.chunk.js",
+    "static/media/proj-6.png": "/react-ewart-portfolio/static/media/proj-6.d5df8163a542001fe6e7.png",
+    "static/media/proj-2.png": "/react-ewart-portfolio/static/media/proj-2.992100eb459a5d7f364a.png",
+    "static/media/proj-3.png": "/react-ewart-portfolio/static/media/proj-3.e69b86e2198b6be6fb80.png",
+    "static/media/cover-photo.jpg": "/react-ewart-portfolio/static/media/cover-photo.42e26b360571fe0c8b26.jpg",
+    "static/media/proj-1.jpg": "/react-ewart-portfolio/static/media/proj-1.38e2b84affc44c1281c4.jpg",
+    "static/media/profile.jpg": "/react-ewart-portfolio/static/media/profile.0323e0f28e1a335c7f5f.jpg",
+    "static/media/proj-5.png": "/react-ewart-portfolio/static/media/proj-5.6839ef7136c232caf56f.png",
+    "static/media/Erin-Ewart-Resume.pdf": "/react-ewart-portfolio/static/media/Erin-Ewart-Resume.f45f9181ab5b5d633726.pdf",
+    "static/media/proj-4.png": "/react-ewart-portfolio/static/media/proj-4.3b83fbe8031280a287d3.png",
+    "index.html": "/react-ewart-portfolio/index.html",
+    "main.165ef42c.js.map": "/react-ewart-portfolio/static/js/main.165ef42c.js.map",
+    "377.c1855308.chunk.js.map": "/react-ewart-portfolio/static/js/377.c1855308.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aa2f62b5.css",
-    "static/js/main.2f7dbafb.js"
+    "static/js/main.165ef42c.js"
   ]
 }
