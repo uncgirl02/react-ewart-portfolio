@@ -8,16 +8,14 @@ import {
   Text,
   Stack,
   Image,
-  VStack,
+  Wrap,
+  WrapItem,
+  Flex,
   Button,
   HStack,
 } from '@chakra-ui/react';
 
-import { Wrap, WrapItem } from '@chakra-ui/react'
-import { Flex, Spacer } from '@chakra-ui/react'
-
 import PROJ1 from '../../assets/project-images/proj-1.jpg';
-import { FaGithub } from 'react-icons/fa';
 import PROJ2 from '../../assets/project-images/proj-2.png';
 import PROJ3 from '../../assets/project-images/proj-3.png';
 import PROJ4 from '../../assets/project-images/proj-4.png';
@@ -98,10 +96,9 @@ export function Project() {
                   </Button>
                 </HStack>
               </Stack>
-              
             </Box>
           </WrapItem>
-          {/* <Spacer /> */}
+        
           <WrapItem>
             <Box
               role={'group'}
@@ -172,7 +169,7 @@ export function Project() {
               </Stack>
             </Box>
           </WrapItem>
-          {/* <Spacer /> */}
+         
           <WrapItem>
             <Box
               role={'group'}
@@ -243,7 +240,7 @@ export function Project() {
               </Stack>
             </Box>
           </WrapItem>
-          {/* <Spacer /> */}
+        
           <WrapItem>
             <Box
               role={'group'}
@@ -314,7 +311,7 @@ export function Project() {
               </Stack>
             </Box>
           </WrapItem>
-          {/* <Spacer /> */}
+          
           <WrapItem>
             <Box
               role={'group'}
@@ -385,7 +382,7 @@ export function Project() {
               </Stack>
             </Box>
           </WrapItem>
-          {/* <Spacer /> */}
+        
           <WrapItem>
             <Box
               role={'group'}

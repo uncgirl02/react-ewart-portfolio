@@ -1,17 +1,20 @@
+
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import {
   ChakraProvider,
   theme,
 } from '@chakra-ui/react';
+import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { Logo } from './Logo';
+import Header from './components/Header';
+import AboutMe from './components/AboutMe';
+import Project from './components/Project';
+import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
 
 
-import Home from './pages/Home'
-import Projects from './pages/Projects'
-
-
-const font = "'Rock Salt', cursive";
+const font =  "'Rock Salt', cursive";
 // const theme = createMuiTheme({
 //   typography: {
 //     fontFamily: font,
@@ -23,20 +26,15 @@ const font = "'Rock Salt', cursive";
 function App() {
   return (
     <ChakraProvider>
-      <Router>
-        <div>
-          <Routes>
-            <Route
-              path="/react-ewart-portfolio"
-              element={<Home />}
-            />
-            <Route
-              path="/projects"
-              element={<Projects />}
-            />
-          </Routes>
-        </div>
-      </Router>
+      <div>
+      <Header></Header> 
+        <main>
+          <AboutMe></AboutMe>
+          <Project></Project>
+          <ContactForm></ContactForm>
+        </main>
+      <Footer></Footer>
+      </div>
     </ChakraProvider>
   );
 }
